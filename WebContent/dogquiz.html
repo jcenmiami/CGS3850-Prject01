@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dog Quiz Questions!!!</title>
+</head>
+<body>
+	
+	<h1>Use a name from the group list below to answer the questions</h1>
+	
+	
+	<p></p>
+	<p></p>
+	<hr>
+	<h3>Feedback</h3>
+	
+	<script type="text/javascript">
+		// Start the actual quiz.
+		
+		// Could create a dictionary, but instructions say
+		// create an array for questions &
+		// an array for answers. Just going to creat a multidimensional array.
+		
+		let dogQuiz = [ ["BORZOI","HOUND"],["BULL TERRIER","TERRIER"],["ROTTWEILER","WORKING"],["COLLIE","HERDING"],["AUSTRALIAN CATTLE DOG","HERDING"] ];
+		
+	
+		// For loop to request the questions on the array
+		// and check if the answer is correct.
+		// keep track of how many correct answers.
+		var correctAnswers = 0;
+		
+		for (i = 0; i < dogQuiz.length  ;i++){
+			var answer = prompt("What's the group for " + dogQuiz[i][0]);
+			
+			//document.write("Answers: " + answer + " " + dogQuiz[i][1] + "<br>");
+			
+			// Check condition to see if the answer is correct.
+			if (dogQuiz[i][1] == answer.toUpperCase()){
+				correctAnswers++;
+				document.write("Correct!<br />");
+			} else {
+				document.write("Incorrect, the answer for " + dogQuiz[i][0] + " is: " + dogQuiz[i][1] + "<br />");
+			}
+			
+		}
+		
+		document.write("<br><br><br>Thanks for playing!!! <br>");
+		document.write("You got " + correctAnswers + " out of 5 correct.");
+		
+	
+	
+	</script>
+	
+
+</body>
+</html>
